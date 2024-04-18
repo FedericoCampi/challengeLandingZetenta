@@ -1,0 +1,264 @@
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    height: 1000px;
+    padding: 0;
+    margin: 0;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+footer{
+    background-color: rgb(6, 6, 114);
+    height: 500px;
+    padding: 0 30px;
+}
+
+.sloganHeader{
+    height: 80px;
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    text-align: end;
+    padding: 0 30px;
+}
+.titleName{
+    font-size: 17px;
+    width: 70px;
+}
+.andina{
+    font-weight: 700;
+}
+.imageHeaderDiv{
+    padding-top: 5px;
+}
+.imageHeader{
+    height: 50px;
+}
+.firstImageDiv {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(12, 12, 12)), url("/public/img/car.jpg");
+    background-size: cover; 
+    background-position: center; 
+    width: 100%; 
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.firstTitleDiv {
+    position: absolute;
+    top: 75%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white;
+    width: 100%;
+}
+.textfirstTitle{
+    padding: 0 30px;
+    text-align: start;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.whatsappDiv{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.cotizaTuAuto{
+    color: rgb(1, 1, 39);
+    font-size: 25px;
+    height: 20px;
+    font-weight: bold;
+}
+.buttonWsp{
+    background-color: #3ddc5d;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    color:white;
+    font-size: 18px;
+}
+.imgWsp{
+    width: 20px;
+    padding-right: 5px;
+}
+.contactate{
+    padding-top: 10px;
+}
+.formContainer{
+    padding: 0 30px;
+}
+.nameInputForm{
+    height: 15px;
+}
+.inputForm {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    padding: 5px;
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="gray" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); /* Agrega una flecha personalizada */
+    background-repeat: no-repeat; 
+    background-position: right center;
+    padding-right: 25px;
+}
+.inputForm:focus {
+    outline: none; 
+    border-color: #007bff;
+}
+.botonSiguienteDiv{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 40px 0;
+}
+.buttonSiguiente{
+    background-color: #2232ca;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    color:white;
+    font-size: 18px;
+    width: 100%;
+}
+.tercerDiv{
+    padding: 0 30px;
+}
+.incluyenDiv{
+    width: 100%;
+    padding-bottom: 20px;
+}
+.incluyenTitle{
+    color: rgb(1, 1, 39);
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+.tiposIncluyenContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.tiposIncluyenDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.imgIncluyen{
+    width: 70px;
+}
+.titleTipos{
+    height: 10px;
+    padding: 0;
+    margin: 5px 0;
+}
+.aclaracionCobertura{
+    padding: 20px 0;
+    text-align: center;
+}
+.cuartoDiv{
+    background-color: rgb(226, 226, 226);
+    height: 100%;
+    padding: 20px 30px 40px 30px;
+}
+.encontraTitle{
+    color: rgb(1, 1, 39);
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+.opcionesCotizacionContainer{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+}
+.opcionesCotizacion{
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 20px 20px 20px;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+}
+.opcionesCotizacion p{
+    color: rgb(1, 1, 39);
+    font-size: 18px;
+    font-weight: bold;
+}
+.opcionesCotizacion ul{
+    margin: 0;
+    padding: 0px 20px;
+}
+.opcionesCotizacion ul li {
+    margin-bottom: 10px;
+}
+.buttonCotizar{
+    margin-top: 10px;
+    background-color: #2232ca;
+    color: white;
+    padding: 10px 60px;
+    border-radius: 30px;
+    font-size: 18px;
+}
+.contactContainer{
+    color: white; 
+    padding: 40px 80px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+}
+.contactDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contactDiv p{
+    margin: 0;
+    height: 30px;
+}
+.contactDiv p:first-of-type {
+    font-weight: bold;
+    font-size: 18px;
+}
+.line{
+    border: 0.5px solid white;
+}
+.ssnDiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.ssnTitle{
+    font-size: 25px;
+    margin: 0;
+}
+.lineSsn{
+    height: auto;
+    border: 1px solid white;
+    height: 25px;
+}
+.imgSsn{
+    width: 30px;
+}
+.superintendencia{
+    font-size: 10px;
+    width: 120px;
+}
