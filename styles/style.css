@@ -11,12 +11,16 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
 }
 footer{
     background-color: rgb(6, 6, 114);
-    height: 500px;
+    height: 100%;
+    position: relative;
     padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
 }
 
 .sloganHeader{
@@ -210,6 +214,10 @@ footer{
 .opcionesCotizacion ul li {
     margin-bottom: 10px;
 }
+.buttonCotizarDiv{
+    width: 100%;
+    text-align: center;
+}
 .buttonCotizar{
     margin-top: 10px;
     background-color: #2232ca;
@@ -218,17 +226,38 @@ footer{
     border-radius: 30px;
     font-size: 18px;
 }
+
+
+.backgroundImage{
+    position: absolute;
+    height: 300px;
+    width: 100%;
+}
+.backgroundImg{
+    height: 100%;
+    width: 70%;
+    opacity: 0.2;
+    object-fit: cover;
+}
+
+
 .contactContainer{
+    width: 100%;
+    height: 40%;
     color: white; 
-    padding: 40px 80px;
+    padding: 40px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 15px;
+    /* background-image: url('/public/img/preview.jpg');
+    background-repeat: no-repeat; 
+    background-position: right center;
+    background-color: rgba(0, 0, 0, 0.7); */
 }
 .contactDiv{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0px 40px;
 }
 .contactDiv p{
     margin: 0;
@@ -239,12 +268,24 @@ footer{
     font-size: 18px;
 }
 .line{
-    border: 0.5px solid white;
+    border-top: 0.5px solid white;
+    margin: 0 30px;
 }
 .ssnDiv{
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: center;
+}
+/* propiedad para separar elementos dentro de un div */
+.space-x-1 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.25rem * var(--tw-space-x-reverse)); /* Espacio horizontal reducido a 0.25rem */
+    margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse))); /* Espacio horizontal reducido a 0.25rem */
+}
+.space-x-6 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem * var(--tw-space-x-reverse));
+    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .ssnTitle{
     font-size: 25px;
@@ -261,4 +302,17 @@ footer{
 .superintendencia{
     font-size: 10px;
     width: 120px;
+}
+.textFooter{
+    color: white;
+    padding-bottom: 30px;
+    text-align: start;
+    position: relative;
+    width: 100%;
+}
+.textFooter p{
+    line-height: 1.5;
+}
+.elServicio{
+    font-weight: bold;
 }
