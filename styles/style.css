@@ -509,3 +509,25 @@ footer{
         padding: 0 60px;
     }
 }
+
+/* altura */
+@media screen and (max-height: 600px) {
+    .cotizaTuAuto{
+        margin: 0;
+        padding-bottom: 15px;
+    }
+    .whatsappDiv{
+        height: 120px;
+    }
+    .nameInputForm{
+    }
+    .contactate{
+        padding: 0;
+    }
+    .custom-select{
+        height: 40px;
+    }
+    .botonSiguienteDiv{
+        padding: 20px 0 0 0;
+    }
+}
