@@ -6,15 +6,51 @@ body{
     padding: 0;
     margin: 0;
 }
-header{
+.header{
+    z-index: 10;
     position: absolute;
+    display: flex;
+    justify-content: space-between;
     top: 0;
     left: 0;
     width: 100%;
+    transition: background-color 0.3s ease-in-out, position 0.3s ease-in-out;
 }
+.fixedHeader {
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    padding: 0 !important;
+}
+.fixedHeader .sloganHeader .titleName p{
+    color: rgb(2 2 123);
+    font-weight: bold;
+}
+.buttonCotizarHeaderDiv{
+    padding-right: 20px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttonCotizarHeader{
+    background-color: rgb(39 105 229);
+    color: white;
+    padding: 10px 60px;
+    border-radius: 30px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+};
+#buttonCotizarHeaderDiv {
+    display: block;
+}
+.hide {
+    display: none;
+}
+
 footer{
-    background-color: rgb(6, 6, 114);
-    height: 100%;
+    background-color: #0c3c94;
+    height: auto;
     position: relative;
     padding: 0 30px;
     display: flex;
@@ -78,11 +114,19 @@ footer{
     width: 100%;
     justify-content: center;
     align-items: center;
+    display: none;
+}
+.whatsappDivMobile{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     padding-top: 15px;
 }
 
 .cotizaTuAuto{
-    color: rgb(1, 1, 39);
+    color: rgb(2 2 123);
     font-size: 25px;
     height: 20px;
     font-weight: bold;
@@ -90,12 +134,13 @@ footer{
 .buttonWsp{
     background-color: #3ddc5d;
     border: none;
-    padding: 10px 40px;
+    padding: 10px 50px;
     border-radius: 30px;
     display: flex;
     align-items: center;
     color:white;
     font-size: 18px;
+    cursor: pointer;
 }
 .imgWsp{
     width: 20px;
@@ -105,7 +150,18 @@ footer{
     padding-top: 10px;
 }
 .formContainer{
+    background-color: white;
+    position: absolute;
+    right: 5%;
+    padding: 10px 30px;
+    border-radius: 15px;
+    display: none;
+}
+
+
+.formContainerMobile{
     padding: 0 30px;
+    display: block;
 }
 .nameInputForm{
     height: 15px;
@@ -134,7 +190,7 @@ footer{
     padding: 40px 0;
 }
 .buttonSiguiente{
-    background-color: #2232ca;
+    background-color: rgb(39 105 229);
     border: none;
     padding: 12px 40px;
     border-radius: 30px;
@@ -143,6 +199,7 @@ footer{
     color:white;
     font-size: 18px;
     width: 100%;
+    cursor: pointer;
 }
 .tercerDiv{
     padding: 0 30px;
@@ -152,7 +209,7 @@ footer{
     padding-bottom: 20px;
 }
 .incluyenTitle{
-    color: rgb(1, 1, 39);
+    color: rgb(2 2 123);
     font-size: 25px;
     font-weight: bold;
     text-align: center;
@@ -181,12 +238,12 @@ footer{
     text-align: center;
 }
 .cuartoDiv{
-    background-color: rgb(226, 226, 226);
+    background-color: rgb(235 234 234);
     height: 100%;
     padding: 20px 30px 40px 30px;
 }
 .encontraTitle{
-    color: rgb(1, 1, 39);
+    color: rgb(2 2 123);
     font-size: 25px;
     font-weight: bold;
     text-align: center;
@@ -203,7 +260,7 @@ footer{
     box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
 }
 .opcionesCotizacion p{
-    color: rgb(1, 1, 39);
+    color: rgb(2 2 123);
     font-size: 18px;
     font-weight: bold;
 }
@@ -220,11 +277,13 @@ footer{
 }
 .buttonCotizar{
     margin-top: 10px;
-    background-color: #2232ca;
+    background-color: rgb(39 105 229);
     color: white;
     padding: 10px 60px;
     border-radius: 30px;
     font-size: 18px;
+    border: none;
+    cursor: pointer;
 }
 
 
@@ -245,19 +304,16 @@ footer{
     width: 100%;
     height: 40%;
     color: white; 
-    padding: 40px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    /* background-image: url('/public/img/preview.jpg');
-    background-repeat: no-repeat; 
-    background-position: right center;
-    background-color: rgba(0, 0, 0, 0.7); */
+    padding: 40px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .contactDiv{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px 40px;
+    padding: 10px 40px 0 40px
 }
 .contactDiv p{
     margin: 0;
@@ -270,11 +326,13 @@ footer{
 .line{
     border-top: 0.5px solid white;
     margin: 0 30px;
+    width: 250px;
 }
 .ssnDiv{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 10px;
 }
 /* propiedad para separar elementos dentro de un div */
 .space-x-1 > :not([hidden]) ~ :not([hidden]) {
@@ -282,11 +340,7 @@ footer{
     margin-right: calc(0.25rem * var(--tw-space-x-reverse)); /* Espacio horizontal reducido a 0.25rem */
     margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse))); /* Espacio horizontal reducido a 0.25rem */
 }
-.space-x-6 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(1rem * var(--tw-space-x-reverse));
-    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
-}
+
 .ssnTitle{
     font-size: 25px;
     margin: 0;
@@ -315,4 +369,143 @@ footer{
 }
 .elServicio{
     font-weight: bold;
+}
+@media (min-width: 500px) {
+    .line {
+        width: 300px;
+    }
+}
+@media (min-width: 800px) {
+    .firstImageDiv{
+        height: 80vh;
+    }
+    .formContainer{
+        display: block;
+    }
+    .formContainerMobile{
+        display: none;
+    }
+    .whatsappDiv{
+        display: flex;
+    }
+    .whatsappDivMobile{
+        display: none;
+    }
+    .sloganHeader{
+        width: 350px;
+        align-items: center;
+        justify-content: start;
+    }
+    .titleName{
+        width: 250px;
+        padding-right: 10px;
+        font-size: 25px;
+    }
+    .firstTitleDiv{
+        top: 80%;
+    }
+    .textfirstTitle{
+        font-size: 30px;
+    }
+    .incluyenTitle{
+        padding-top: 20px;
+        font-size: 30px;
+    }
+    .tiposIncluyenContainer{
+        display: flex;
+        justify-content: space-around;
+        padding: 40px 0;
+    }
+    .encontraTitle{
+        font-size: 30px;
+    }
+    .opcionesCotizacionContainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .opcionesCotizacion{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .contactContainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px 0px;
+    }
+    .lineResponsive{
+        border-top: 1px solid white;
+        margin: 0 40px;
+    }
+    .ssnDiv{
+        height: 60px;
+    }
+    .line{
+        display: none;
+    }
+}
+@media (min-width: 1200px) {
+    .firstImageDiv{
+        height: 90vh;
+    }
+    .contactContainer{
+        padding: 80px 0;
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .lineResponsive{
+        border: none;
+        margin: 0;
+    }
+    .line{
+        display: block;
+        height: 60px;
+        border-right: 1px solid white;
+        width: 1px;
+        margin: 0;
+    }
+    .formContainer{
+        height: 80%;
+    }
+    .botonSiguienteDiv{
+        padding: 100px 0 30px 0;
+    }
+    .whatsappDiv{
+        padding: 20px 0 0 0;
+    }
+    .sloganHeader{
+        width: 500px;
+        padding-left: 50px;
+    }
+    .titleName{
+        font-size: 40px;
+        width: auto;
+    }
+    .textfirstTitle{
+        font-size: 45px;
+    }
+    .opcionesCotizacionContainer{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    .imgIncluyen{
+        width: 100px;
+    }
+    .titleTipos{
+        font-size: 20px;
+    }
+    .encontraTitle{
+        padding: 0px 0 30px 0;
+    }
+    .header{
+        padding-top: 40px;
+    }
+    footer{
+        padding: 0 60px;
+    }
 }

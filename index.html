@@ -13,15 +13,20 @@
 
 </head>
 <body>
-    <header>
+    <header id="header" class="header">
         <div class="sloganHeader">
             <div class="titleName">
                 <p>Mercantil
                 <span class="andina">Andina</span></p>
             </div>
             <div class="imageHeaderDiv">
-                <img src="/public/icons/montanas.png" class="imageHeader"/>
+                <img id="headerImg" src="/public/icons/montanas.png" class="imageHeader"/>
             </div>
+        </div>
+        <div id="buttonCotizarHeaderDiv" class="buttonCotizarHeaderDiv">
+            <button class="buttonCotizarHeader">
+                Cotizar
+            </button>
         </div>
     </header>
     <main>
@@ -33,8 +38,57 @@
                         para el seguro de tu auto
                     </p>
                 </div>
+                <div class="formContainer">
+                    <div class="whatsappDiv">
+                        <p class="cotizaTuAuto">Cotizá tu auto</p>
+                        <button class="buttonWsp">
+                            <img src="/public/icons/whatsapp.png" class="imgWsp"/>
+                            WhatsApp
+                        </button>
+                        <p class="contactate">
+                            O dejanos tus datos para que te contactemos:
+                        </p>
+                    </div>
+                    <div class="custom-select">
+                        <p class="nameInputForm">Marca*</p>
+                        <select class="inputForm">
+                          <option value="opcion1"></option>
+                          <option value="opcion2"></option>
+                          <option value="opcion3"></option>
+                        </select>
+                    </div>
+                    <div class="custom-select">
+                        <p class="nameInputForm">Año*</p>
+                        <select class="inputForm">
+                          <option value="opcion1"></option>
+                          <option value="opcion2"></option>
+                          <option value="opcion3"></option>
+                        </select>
+                    </div>
+                    <div class="custom-select">
+                        <p class="nameInputForm">Modelo*</p>
+                        <select class="inputForm">
+                          <option value="opcion1"></option>
+                          <option value="opcion2"></option>
+                          <option value="opcion3"></option>
+                        </select>
+                    </div>
+                    <div class="custom-select">
+                        <p class="nameInputForm">Versión*</p>
+                        <select class="inputForm">
+                          <option value="opcion1"></option>
+                          <option value="opcion2"></option>
+                          <option value="opcion3"></option>
+                        </select>
+                    </div>
+                    <div class="botonSiguienteDiv">
+                        <button class="buttonSiguiente">
+                            Siguiente
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="whatsappDiv">
+            <div class="whatsappDivMobile">
                 <p class="cotizaTuAuto">Cotizá tu auto</p>
                 <button class="buttonWsp">
                     <img src="/public/icons/whatsapp.png" class="imgWsp"/>
@@ -45,7 +99,7 @@
                 </p>
             </div>
         </div>
-        <div class="formContainer">
+        <div class="formContainerMobile">
             <div class="custom-select">
                 <p class="nameInputForm">Marca*</p>
                 <select class="inputForm">
@@ -194,12 +248,12 @@
                 <p>0800-666-8400</p>
             </div>
             <div class="line"></div>
-            <div class="contactDiv">
+            <div class="contactDiv lineResponsive">
                 <p>Organismo de control</p>
                 <p>www.argentina.gob.ar/ssn</p>
             </div>
             <div class="line"></div>
-            <div class="ssnDiv space-x-1">
+            <div class="ssnDiv space-x-1 lineResponsive">
                 <img src="/public/icons/enterprise.png" class="imgSsn"/> 
                 <p class="ssnTitle">SSN</p>
                 <div class="lineSsn"></div>
@@ -234,5 +288,22 @@
             </p>
         </div>
     </footer>
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.getElementById('header');
+            var headerImg = document.getElementById('headerImg');
+            var buttonCotizarHeaderDiv = document.getElementById('buttonCotizarHeaderDiv');
+            
+            if (window.scrollY > 500) {
+                header.classList.add('fixedHeader');
+                headerImg.src = '/public/icons/montanasBlue.png';
+                buttonCotizarHeaderDiv.classList.remove('hide');
+            } else {
+                header.classList.remove('fixedHeader');
+                headerImg.src = '/public/icons/montanas.png';
+                buttonCotizarHeaderDiv.classList.add('hide');
+            }
+        });
+    </script>
 </body>
 </html>
