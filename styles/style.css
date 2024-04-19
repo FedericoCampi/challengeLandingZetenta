@@ -511,7 +511,7 @@ footer{
 }
 
 /* altura */
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 700px) {
     .cotizaTuAuto{
         margin: 0;
         padding-bottom: 15px;
